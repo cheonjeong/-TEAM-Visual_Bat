@@ -19,6 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AbilityImage.h" />
+    <ClInclude Include="AbilityPage.h" />
     <ClInclude Include="AnimationCtrl.h" />
     <ClInclude Include="BaseInclude.h" />
     <ClInclude Include="Bound.h" />
@@ -26,9 +28,12 @@
     <ClInclude Include="BoundingMgr.h" />
     <ClInclude Include="BoundingSphere.h" />
     <ClInclude Include="BufferMgr.h" />
+    <ClInclude Include="C2DMouse.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="CameraMgr.h" />
     <ClInclude Include="Champion.h" />
+    <ClInclude Include="ChampionSelect.h" />
+    <ClInclude Include="CheonHeader.h" />
     <ClInclude Include="CubeTexture.h" />
     <ClInclude Include="Cube_Texture.h" />
     <ClInclude Include="Device.h" />
@@ -66,7 +71,9 @@
     <ClInclude Include="ResourceFunc.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneMgr.h" />
+    <ClInclude Include="SelectScene.h" />
     <ClInclude Include="SkinnedMesh.h" />
+    <ClInclude Include="SpellSelect.h" />
     <ClInclude Include="SummonTerrain.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClInclude>
@@ -84,6 +91,8 @@
     <ClInclude Include="XFileUtil.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AbilityImage.cpp" />
+    <ClCompile Include="AbilityPage.cpp" />
     <ClCompile Include="AnimationCtrl.cpp" />
     <ClCompile Include="BaseInclude.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -93,9 +102,11 @@
     <ClCompile Include="BoundingMgr.cpp" />
     <ClCompile Include="BoundingSphere.cpp" />
     <ClCompile Include="BufferMgr.cpp" />
+    <ClCompile Include="C2DMouse.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="CameraMgr.cpp" />
     <ClCompile Include="Champion.cpp" />
+    <ClCompile Include="ChampionSelect.cpp" />
     <ClCompile Include="CubeTexture.cpp" />
     <ClCompile Include="Cube_Texture.cpp" />
     <ClCompile Include="Device.cpp" />
@@ -126,7 +137,9 @@
     <ClCompile Include="ResourceFunc.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SceneMgr.cpp" />
+    <ClCompile Include="SelectScene.cpp" />
     <ClCompile Include="SkinnedMesh.cpp" />
+    <ClCompile Include="SpellSelect.cpp" />
     <ClCompile Include="SummonTerrain.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClCompile>

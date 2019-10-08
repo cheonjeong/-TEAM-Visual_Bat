@@ -1,6 +1,7 @@
 #include "BaseInclude.h"
 #include "SceneMgr.h"
 #include"GameScene.h"
+#include "SelectScene.h"
 
 CSceneMgr::CSceneMgr()
 	:m_State(NULL)
@@ -14,7 +15,7 @@ CSceneMgr::~CSceneMgr()
 
 void CSceneMgr::Initialize()
 {
-	m_State = new GameScene;
+	m_State = new CSelectScene;
 	if (m_State != NULL)
 		m_State->Initialize();
 }
