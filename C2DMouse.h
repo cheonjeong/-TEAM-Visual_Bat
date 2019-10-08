@@ -24,12 +24,15 @@ public:
 public:
 	template <typename T1>
 	string IsInImage(map<string, T1> ImageList);
+
+public:
+	template<typename T2>
+	T2 IsInImage(T2 Image);
 };
 
 template<typename T>
 inline T C2DMouse::IsInImage(vector<T> vecImageList)
 {
-	T s = 0;
 	for (int i = 0; i < vecImageList.size(); i++)
 	{
 		if (PtInRect(&vecImageList[i]->GetRect(), m_GetCur))
@@ -54,4 +57,11 @@ inline string C2DMouse::IsInImage(map<string, T1> ImageList)
 		}
 	}
 	return s;
+}
+
+template<typename T2>
+inline T2 C2DMouse::IsInImage(T2 Image)
+{
+	if (PtInRect(Image->GetRect(), m_GetCur))
+		return Image;
 }

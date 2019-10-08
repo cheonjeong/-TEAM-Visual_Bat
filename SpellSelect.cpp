@@ -21,7 +21,7 @@ void CSpellSelect::Initialize()
 {
 	D3DXCreateSprite(GetDevice(), &m_pSprite);
 
-	D3DXCreateTextureFromFileEx(
+	 D3DXCreateTextureFromFileEx(
 		GetDevice(),
 		m_SpellFile,
 		D3DX_DEFAULT_NONPOW2,

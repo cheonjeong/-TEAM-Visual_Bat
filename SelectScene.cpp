@@ -9,7 +9,6 @@
 CSelectScene::CSelectScene()
 	:m_p2Dmouse(NULL), m_ChampionRender(NULL)
 	, m_pSpellSelect_1(NULL), m_pSpellSelect_2(NULL)
-	, m_pSpell_1(NULL), m_pSpell_2(NULL)
 {
 	m_vecSpellList.reserve(2);
 }
@@ -70,8 +69,8 @@ void CSelectScene::MouseSpellCheck()
 {
 	for (int i = 0; i < m_vecSpellList.size(); i++)
 	{
-		if(m_vecSpellList[i]->Getpos() == D3DXVECTOR3(537, 737, 0))		m_pSpell_1 = m_p2Dmouse->IsInImage(m_vecSpellList);
-		else if(m_vecSpellList[i]->Getpos() == D3DXVECTOR3(575, 737, 0))m_pSpell_2 = m_p2Dmouse->IsInImage(m_vecSpellList);
+		if(m_vecSpellList[i]->Getpos() == D3DXVECTOR3(537, 737, 0))				m_pSpellSelect_1 = m_p2Dmouse->IsInImage(m_vecSpellList);
+		else if(m_vecSpellList[i]->Getpos() == D3DXVECTOR3(575, 737, 0))		m_pSpellSelect_2 = m_p2Dmouse->IsInImage(m_vecSpellList);
 	}
 }
 
@@ -170,6 +169,9 @@ void CSelectScene::Spell_Initialize()
 
 	m_pSpellSelect_1 = new CSpellSelect(L"Resource/choen/Spell_Image/gangta.dds", D3DXVECTOR3(10, 10, 0));
 	m_pSpellSelect_2 = new CSpellSelect(L"Resource/choen/Spell_Image/gangta.dds", D3DXVECTOR3(60, 60, 0));
+
+	m_pSpellSelect_1->Initialize();
+	m_pSpellSelect_2->Initialize();
 }
 
 void CSelectScene::Spell_Render()
@@ -178,8 +180,14 @@ void CSelectScene::Spell_Render()
 		m_vecSpellList[i]->Render();
 
 	if (m_pSpellSelect_1)
-		m_pSpellSelect_1->Render(D3DXVECTOR3(10, 10, 0));
+	{
+		m_pSpellSelect_1->Render(D3DXVECTOR3(537, 737, 0));
+		m_pSpellSelect_1->Render(D3DXVECTOR3(35, 200, 0));
+	}
 
 	if (m_pSpellSelect_2)
-		m_pSpellSelect_2->Render(D3DXVECTOR3(60, 60,0));
+	{
+		m_pSpellSelect_2->Render(D3DXVECTOR3(575, 737, 0));
+		m_pSpellSelect_2->Render(D3DXVECTOR3(35, 235, 0));
+	}
 }

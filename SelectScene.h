@@ -36,11 +36,9 @@ private://Ability map
 
 private://Spell map
 	vector<CSpellSelect*>				m_vecSpellList;
-	CSpellSelect*						m_pSpell_1;
 	CSpellSelect*						m_pSpellSelect_1;
 	CSpellSelect*						m_pSpellSelect_2;
-	CSpellSelect*						m_pSpell_2;
-	enum SpellType { Å»Áø, Á¡¸ê, Èú, ¹æ¾î¸· };
+
 
 	void MouseSpellCheck();
 
