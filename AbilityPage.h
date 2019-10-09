@@ -1,5 +1,5 @@
 #pragma once
-class CAbilityImage;
+class CImage_Loader;
 
 class CAbilityPage
 {
@@ -18,11 +18,11 @@ public:
 	void Release();
 
 private:
-	map<string, CAbilityImage*>				m_mapDetailedRune;
-	map<string, CAbilityImage*>				m_mapContolRune;
-	map<string, CAbilityImage*>				m_mapBrainStormRune;
-	map<string, CAbilityImage*>				m_mapMasicRune;
-	map<string, CAbilityImage*>				m_mapResolutionRune;
+	map<string, CImage_Loader*>				m_mapDetailedRune;
+	map<string, CImage_Loader*>				m_mapContolRune;
+	map<string, CImage_Loader*>				m_mapBrainStormRune;
+	map<string, CImage_Loader*>				m_mapMasicRune;
+	map<string, CImage_Loader*>				m_mapResolutionRune;
 public:
 	void ImageLoad_To_Detailed();
 	void ImageLoad_To_Control();

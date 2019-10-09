@@ -19,7 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AbilityImage.h" />
     <ClInclude Include="AbilityPage.h" />
     <ClInclude Include="AnimationCtrl.h" />
     <ClInclude Include="BaseInclude.h" />
@@ -32,7 +31,6 @@
     <ClInclude Include="Camera.h" />
     <ClInclude Include="CameraMgr.h" />
     <ClInclude Include="Champion.h" />
-    <ClInclude Include="ChampionSelect.h" />
     <ClInclude Include="CheonHeader.h" />
     <ClInclude Include="CubeTexture.h" />
     <ClInclude Include="Cube_Texture.h" />
@@ -54,6 +52,7 @@
     <ClInclude Include="HEADER\Value.h" />
     <ClInclude Include="AppMain.h" />
     <ClInclude Include="HierachyLoader.h" />
+    <ClInclude Include="Image_Loader.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="MainGame.h" />
     <ClInclude Include="MathMgr.h" />
@@ -73,7 +72,6 @@
     <ClInclude Include="SceneMgr.h" />
     <ClInclude Include="SelectScene.h" />
     <ClInclude Include="SkinnedMesh.h" />
-    <ClInclude Include="SpellSelect.h" />
     <ClInclude Include="SummonTerrain.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClInclude>
@@ -91,7 +89,6 @@
     <ClInclude Include="XFileUtil.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AbilityImage.cpp" />
     <ClCompile Include="AbilityPage.cpp" />
     <ClCompile Include="AnimationCtrl.cpp" />
     <ClCompile Include="BaseInclude.cpp">
@@ -106,7 +103,6 @@
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="CameraMgr.cpp" />
     <ClCompile Include="Champion.cpp" />
-    <ClCompile Include="ChampionSelect.cpp" />
     <ClCompile Include="CubeTexture.cpp" />
     <ClCompile Include="Cube_Texture.cpp" />
     <ClCompile Include="Device.cpp" />
@@ -119,6 +115,7 @@
     <ClCompile Include="GameScene.cpp" />
     <ClCompile Include="Grid.cpp" />
     <ClCompile Include="HierachyLoader.cpp" />
+    <ClCompile Include="Image_Loader.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="AppMain.cpp" />
@@ -139,7 +136,6 @@
     <ClCompile Include="SceneMgr.cpp" />
     <ClCompile Include="SelectScene.cpp" />
     <ClCompile Include="SkinnedMesh.cpp" />
-    <ClCompile Include="SpellSelect.cpp" />
     <ClCompile Include="SummonTerrain.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClCompile>

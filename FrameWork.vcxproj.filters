@@ -223,12 +223,6 @@
     <Filter Include="CHEON\ROBBY\AbilitySelect">
       <UniqueIdentifier>{6fd4d67a-854e-43dc-8906-2ef719c31ca3}</UniqueIdentifier>
     </Filter>
-    <Filter Include="CHEON\ROBBY\SpellSelect">
-      <UniqueIdentifier>{4c68cf23-c468-455b-a2fa-18bd51f99ae5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHEON\ROBBY\AbilitySelect\Image">
-      <UniqueIdentifier>{b7149021-a66d-460a-93dd-43a39407b976}</UniqueIdentifier>
-    </Filter>
     <Filter Include="CHEON\ROBBY\AbilitySelect\page">
       <UniqueIdentifier>{eab1b677-5176-4fdd-be9a-0f92e151aca4}</UniqueIdentifier>
     </Filter>
@@ -238,8 +232,8 @@
     <Filter Include="CHEON\ROBBY\SelectScene">
       <UniqueIdentifier>{3c621100-ac02-42ca-a7c3-99f8d74a7894}</UniqueIdentifier>
     </Filter>
-    <Filter Include="CHEON\ROBBY\SelectScene\ChampionSelect">
-      <UniqueIdentifier>{0a14b8dc-ade1-4a34-80b3-048368363250}</UniqueIdentifier>
+    <Filter Include="CHEON\ROBBY\Image_Loader">
+      <UniqueIdentifier>{26afa222-f15b-4ede-9686-0daa9e034344}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -414,12 +408,6 @@
     <ClInclude Include="SummonTerrain.h">
       <Filter>소스 파일\02. Object\SommonTerrain</Filter>
     </ClInclude>
-    <ClInclude Include="ChampionSelect.h">
-      <Filter>CHEON\ROBBY\SelectScene\ChampionSelect</Filter>
-    </ClInclude>
-    <ClInclude Include="AbilityImage.h">
-      <Filter>CHEON\ROBBY\AbilitySelect\Image</Filter>
-    </ClInclude>
     <ClInclude Include="AbilityPage.h">
       <Filter>CHEON\ROBBY\AbilitySelect\page</Filter>
     </ClInclude>
@@ -432,8 +420,8 @@
     <ClInclude Include="C2DMouse.h">
       <Filter>CHEON\2D_Mouse</Filter>
     </ClInclude>
-    <ClInclude Include="SpellSelect.h">
-      <Filter>CHEON\ROBBY\SpellSelect</Filter>
+    <ClInclude Include="Image_Loader.h">
+      <Filter>CHEON\ROBBY\Image_Loader</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -590,12 +578,6 @@
     <ClCompile Include="SummonTerrain.cpp">
       <Filter>소스 파일\02. Object\SommonTerrain</Filter>
     </ClCompile>
-    <ClCompile Include="ChampionSelect.cpp">
-      <Filter>CHEON\ROBBY\SelectScene\ChampionSelect</Filter>
-    </ClCompile>
-    <ClCompile Include="AbilityImage.cpp">
-      <Filter>CHEON\ROBBY\AbilitySelect\Image</Filter>
-    </ClCompile>
     <ClCompile Include="AbilityPage.cpp">
       <Filter>CHEON\ROBBY\AbilitySelect\page</Filter>
     </ClCompile>
@@ -605,8 +587,8 @@
     <ClCompile Include="C2DMouse.cpp">
       <Filter>CHEON\2D_Mouse</Filter>
     </ClCompile>
-    <ClCompile Include="SpellSelect.cpp">
-      <Filter>CHEON\ROBBY\SpellSelect</Filter>
+    <ClCompile Include="Image_Loader.cpp">
+      <Filter>CHEON\ROBBY\Image_Loader</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

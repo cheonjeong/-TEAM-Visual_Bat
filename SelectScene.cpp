@@ -1,9 +1,8 @@
 #include "BaseInclude.h"
 #include "SelectScene.h"
-#include "ChampionSelect.h"
 #include "C2DMouse.h"
-#include "SpellSelect.h"
 #include "AbilityPage.h"
+#include "Image_Loader.h"
 
 
 CSelectScene::CSelectScene()
@@ -81,15 +80,15 @@ void CSelectScene::Champ_Initialize()
 		{//Champion Image
 		 //이미지 객체 만들때 객체간의 거리 x = 70, y = 70
 
-			CChampionSelect*		pGaren;
-			pGaren = new CChampionSelect(L"Resource/choen/ChampImage/Garen/Garen_Square.dds", D3DXVECTOR3(363, 152, 0));
+			CImage_Loader*		pGaren;
+			pGaren = new CImage_Loader(L"Resource/choen/ChampImage/Garen/Garen_Square.dds", D3DXVECTOR3(363, 152, 0));
 
 			if (pGaren)
 				m_mapChampionList["Garen"] = pGaren;
 
 
-			CChampionSelect*		pAatrox;
-			pAatrox = new CChampionSelect(L"Resource/choen/ChampImage/Atrox/Aatrox_Square.dds", D3DXVECTOR3(446, 152, 0));
+			CImage_Loader*		pAatrox;
+			pAatrox = new CImage_Loader(L"Resource/choen/ChampImage/Atrox/Aatrox_Square.dds", D3DXVECTOR3(446, 152, 0));
 
 			if (pAatrox)
 				m_mapChampionList["Aatrox"] = pAatrox;
@@ -97,14 +96,14 @@ void CSelectScene::Champ_Initialize()
 		//Circle Image;
 		{
 			D3DXVECTOR3	pickpos = D3DXVECTOR3(95, 200, 0);// 고정위치
-			CChampionSelect*	pCircleGaren;
-			pCircleGaren = new CChampionSelect(L"Resource/choen/ChampImage/Garen/Garen_Circle.dds", pickpos);
+			CImage_Loader*	pCircleGaren;
+			pCircleGaren = new CImage_Loader(L"Resource/choen/ChampImage/Garen/Garen_Circle.dds", pickpos);
 			if (pCircleGaren)
 				m_CircleChampImage["Garen"] = pCircleGaren;
 
 
-			CChampionSelect*	pCircleAatox;
-			pCircleAatox = new CChampionSelect(L"Resource/choen/ChampImage/Atrox/Aatrox_Circle.dds", pickpos);
+			CImage_Loader*	pCircleAatox;
+			pCircleAatox = new CImage_Loader(L"Resource/choen/ChampImage/Atrox/Aatrox_Circle.dds", pickpos);
 			if (pCircleAatox)
 				m_CircleChampImage["Aatrox"] = pCircleAatox;
 		}
@@ -128,12 +127,12 @@ void CSelectScene::Champ_Render()
 	for (auto it = m_mapChampionList.begin(); it != m_mapChampionList.end(); ++it)
 	{
 		if (it->second != NULL)
-			it->second->Render();
+			it->second->Render(D3DXVECTOR3(0.5f, 0.5f, 0.5f));
 	}
 
 	//챔피언 선택 후 내 챔피언 이미지
 	if (m_ChampionRender)
-		m_ChampionRender->Render();
+		m_ChampionRender->Render(D3DXVECTOR3(0.5f, 0.5f, 0.5f));
 }
 
 void CSelectScene::Spell_Initialize()
@@ -152,23 +151,23 @@ void CSelectScene::Spell_Initialize()
 			D3DXVECTOR3 pos_08 = D3DXVECTOR3(630, 570, 0);
 			D3DXVECTOR3 pos_09 = D3DXVECTOR3(480, 640, 0);
 
-			m_vecSpellList[0] = new CSpellSelect(L"Resource/choen/Spell_Image/gangta.dds", pos_01);
-			m_vecSpellList[1] = new CSpellSelect(L"Resource/choen/Spell_Image/gangta.dds", pos_02);
-			m_vecSpellList[2] = new CSpellSelect(L"Resource/choen/Spell_Image/gangta.dds", pos_03);
-			m_vecSpellList[3] = new CSpellSelect(L"Resource/choen/Spell_Image/gangta.dds", pos_04);
-			m_vecSpellList[4] = new CSpellSelect(L"Resource/choen/Spell_Image/gangta.dds", pos_05);
-			m_vecSpellList[5] = new CSpellSelect(L"Resource/choen/Spell_Image/gangta.dds", pos_06);
-			m_vecSpellList[6] = new CSpellSelect(L"Resource/choen/Spell_Image/gangta.dds", pos_07);
-			m_vecSpellList[7] = new CSpellSelect(L"Resource/choen/Spell_Image/gangta.dds", pos_08);
-			m_vecSpellList[8] = new CSpellSelect(L"Resource/choen/Spell_Image/gangta.dds", pos_09);
+			m_vecSpellList[0] = new CImage_Loader(L"Resource/choen/Spell_Image/gangta.dds", pos_01);
+			m_vecSpellList[1] = new CImage_Loader(L"Resource/choen/Spell_Image/gangta.dds", pos_02);
+			m_vecSpellList[2] = new CImage_Loader(L"Resource/choen/Spell_Image/gangta.dds", pos_03);
+			m_vecSpellList[3] = new CImage_Loader(L"Resource/choen/Spell_Image/gangta.dds", pos_04);
+			m_vecSpellList[4] = new CImage_Loader(L"Resource/choen/Spell_Image/gangta.dds", pos_05);
+			m_vecSpellList[5] = new CImage_Loader(L"Resource/choen/Spell_Image/gangta.dds", pos_06);
+			m_vecSpellList[6] = new CImage_Loader(L"Resource/choen/Spell_Image/gangta.dds", pos_07);
+			m_vecSpellList[7] = new CImage_Loader(L"Resource/choen/Spell_Image/gangta.dds", pos_08);
+			m_vecSpellList[8] = new CImage_Loader(L"Resource/choen/Spell_Image/gangta.dds", pos_09);
 		}
 	}
 	
 	for (int i = 0; i < m_vecSpellList.size(); i++)
 		m_vecSpellList[i]->Initialize();
 
-	m_pSpellSelect_1 = new CSpellSelect(L"Resource/choen/Spell_Image/gangta.dds", D3DXVECTOR3(10, 10, 0));
-	m_pSpellSelect_2 = new CSpellSelect(L"Resource/choen/Spell_Image/gangta.dds", D3DXVECTOR3(60, 60, 0));
+	m_pSpellSelect_1 = new CImage_Loader(L"Resource/choen/Spell_Image/gangta.dds", D3DXVECTOR3(10, 10, 0));
+	m_pSpellSelect_2 = new CImage_Loader(L"Resource/choen/Spell_Image/gangta.dds", D3DXVECTOR3(60, 60, 0));
 
 	m_pSpellSelect_1->Initialize();
 	m_pSpellSelect_2->Initialize();
@@ -177,17 +176,17 @@ void CSelectScene::Spell_Initialize()
 void CSelectScene::Spell_Render()
 {
 	for (int i = 0; i < m_vecSpellList.size(); i++)
-		m_vecSpellList[i]->Render();
+		m_vecSpellList[i]->Render(D3DXVECTOR3(0.5f, 0.5f, 0.5f));
 
 	if (m_pSpellSelect_1)
 	{
-		m_pSpellSelect_1->Render(D3DXVECTOR3(537, 737, 0));
-		m_pSpellSelect_1->Render(D3DXVECTOR3(35, 200, 0));
+		m_pSpellSelect_1->Render(D3DXVECTOR3(537, 737, 0), D3DXVECTOR3(0.5f, 0.5f, 0.5f));
+		m_pSpellSelect_1->Render(D3DXVECTOR3(35, 200, 0), D3DXVECTOR3(0.5f, 0.5f, 0.5f));
 	}
 
 	if (m_pSpellSelect_2)
 	{
-		m_pSpellSelect_2->Render(D3DXVECTOR3(575, 737, 0));
-		m_pSpellSelect_2->Render(D3DXVECTOR3(35, 235, 0));
+		m_pSpellSelect_2->Render(D3DXVECTOR3(575, 737, 0), D3DXVECTOR3(0.5f, 0.5f, 0.5f));
+		m_pSpellSelect_2->Render(D3DXVECTOR3(35, 235, 0), D3DXVECTOR3(0.5f, 0.5f, 0.5f));
 	}
 }

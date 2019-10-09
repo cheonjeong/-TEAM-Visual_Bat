@@ -1,6 +1,6 @@
 #include "BaseInclude.h"
 #include "AbilityPage.h"
-#include "AbilityImage.h"
+#include "Image_Loader.h"
 
 
 CAbilityPage::CAbilityPage()
@@ -40,65 +40,71 @@ void CAbilityPage::Release()
 
 void CAbilityPage::ImageLoad_To_Detailed()
 {
-	CAbilityImage*	Main = new CAbilityImage;
-	Main->Initialize(L"Resource/cheon/Runepage/정밀/Main.png");
+	CImage_Loader*	Main = new CImage_Loader
+	(L"Resource/cheon/Runepage/정밀/Main.png", D3DXVECTOR3(200, 200, 0));
+	Main->Initialize();
 	m_mapDetailedRune["Main"] = Main;
 
-	CAbilityImage*	Press_the_Attack_rune = new CAbilityImage;
-	Press_the_Attack_rune->Initialize(L"Resource/cheon/Runepage/정밀/Press_the_Attack_rune.png");
+	CImage_Loader*	Press_the_Attack_rune = new CImage_Loader
+	(L"Resource/cheon/Runepage/정밀/Press_the_Attack_rune.png", D3DXVECTOR3(150, 250, 0));
+	Press_the_Attack_rune->Initialize();
 	m_mapDetailedRune["Press_the_Attack_rune"] = Press_the_Attack_rune;
 }
 
 void CAbilityPage::ImageLoad_To_Control()
 {
-	CAbilityImage*	Main = new CAbilityImage;
-	Main->Initialize(L"Resource/cheon/Runepage/지배/Main.png");
+	CImage_Loader*	Main = new CImage_Loader
+	(L"Resource/cheon/Runepage/지배/Main.png", D3DXVECTOR3(350, 200, 0));
+	Main->Initialize();
 	m_mapContolRune["Main"] = Main;
 }
 
 void CAbilityPage::ImageLoad_To_BrainStorm()
 {
-	CAbilityImage*	Main = new CAbilityImage;
-	Main->Initialize(L"Resource/cheon/Runepage/영감/Main.png");
+	CImage_Loader*	Main = new CImage_Loader
+	(L"Resource/cheon/Runepage/영감/Main.png", D3DXVECTOR3(500, 200, 0));
+	Main->Initialize();
 	m_mapBrainStormRune["Main"] = Main;
 }
 
 void CAbilityPage::ImageLoad_To_Masic()
 {
-	CAbilityImage*	Main = new CAbilityImage;
-	Main->Initialize(L"Resource/cheon/Runepage/마법/Main.png");
+	CImage_Loader*	Main = new CImage_Loader
+	(L"Resource/cheon/Runepage/마법/Main.png", D3DXVECTOR3(650, 200, 0));
+	Main->Initialize();
 	m_mapMasicRune["Main"] = Main;
 }
 
 void CAbilityPage::ImageLoad_To_Resolution()
 {
-	CAbilityImage*	Main = new CAbilityImage;
-	Main->Initialize(L"Resource/cheon/Runepage/결의/Main.png");
+	CImage_Loader*	Main = new CImage_Loader
+	(L"Resource/cheon/Runepage/결의/Main.png", D3DXVECTOR3(800, 200, 0));
+	Main->Initialize();
 	m_mapResolutionRune["Main"] = Main;
 }
 
 void CAbilityPage::ImageRender_To_Detailed()
 {
-	m_mapDetailedRune["Main"]->Main_Render(D3DXVECTOR3(200, 200, 0));
+	m_mapDetailedRune["Main"]->Render(D3DXVECTOR3(200, 200, 0), D3DXVECTOR3(1.5f, 1.5f, 1.5f));
 	m_mapDetailedRune["Press_the_Attack_rune"]->Render(D3DXVECTOR3(150, 250, 0));
 }
 
 void CAbilityPage::ImageRender_To_Control()
 {
-	m_mapContolRune["Main"]->Main_Render(D3DXVECTOR3(350, 200, 0));
+	m_mapContolRune["Main"]->Render(D3DXVECTOR3(350, 200, 0), D3DXVECTOR3(1.5f, 1.5f, 1.5f));
 }
 
 void CAbilityPage::ImageRender_To_BrainStorm()
 {
-	m_mapBrainStormRune["Main"]->Main_Render(D3DXVECTOR3(500, 200, 0));
+	m_mapBrainStormRune["Main"]->Render(D3DXVECTOR3(500, 200, 0), D3DXVECTOR3(1.5f, 1.5f, 1.5f));
 }
 
 void CAbilityPage::ImageRender_To_Masic()
 {
-	m_mapMasicRune["Main"]->Main_Render(D3DXVECTOR3(650, 200, 0));
+	m_mapMasicRune["Main"]->Render(D3DXVECTOR3(650, 200, 0), D3DXVECTOR3(1.5f, 1.5f, 1.5f));
 }
 
 void CAbilityPage::ImageRender_To_Resolution()
 {
-	m_mapResolutionRune["Main"]->Main_Render(D3DXVECTOR3(800, 200, 0));
+	m_mapResolutionRune["Main"]->Render(D3DXVECTOR3(800, 200, 0), D3DXVECTOR3(1.5f, 1.5f, 1.5f));
 }

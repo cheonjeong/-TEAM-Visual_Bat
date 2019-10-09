@@ -1,9 +1,8 @@
 #pragma once
 #include "Scene.h"
 
-class CChampionSelect;
+class CImage_Loader;
 class CAbilityPage;
-class CSpellSelect;
 class C2DMouse;
 
 class CSelectScene :
@@ -26,18 +25,18 @@ private:
 	void WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam) override;
 
 private:// Champion map
-	map<string, CChampionSelect*>			m_mapChampionList;
-	map<string, CChampionSelect*>			m_CircleChampImage;
+	map<string, CImage_Loader*>			m_mapChampionList;
+	map<string, CImage_Loader*>			m_CircleChampImage;
 	void MouseChampionCheck();
-	CChampionSelect*				m_ChampionRender;
+	CImage_Loader*				m_ChampionRender;
 
 private://Ability map
 	map<string, CAbilityPage*>			m_mapAbilityList;
 
 private://Spell map
-	vector<CSpellSelect*>				m_vecSpellList;
-	CSpellSelect*						m_pSpellSelect_1;
-	CSpellSelect*						m_pSpellSelect_2;
+	vector<CImage_Loader*>				m_vecSpellList;
+	CImage_Loader*						m_pSpellSelect_1;
+	CImage_Loader*						m_pSpellSelect_2;
 
 
 	void MouseSpellCheck();
