@@ -36,9 +36,15 @@ private:
 	CImage_Loader*						m_testsuzi;
 
 	// >> new class
-	CUI*								m_pUI;
+	CUI*								m_pChamp;
+	CUI*								m_pSpell;
 	vector<CUI*>						m_vecChamp;
+	vector<CUI*>						m_vecChampCircle;
 	vector<CUI*>						m_vecSpell;
 	map<string, vector<CUI*>*>			m_mapUI_List;
+
+public:
+	void ChampPicking();
+	void SpellPicking();
 };
 

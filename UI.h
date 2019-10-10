@@ -13,5 +13,11 @@ private:
 	CImage_Loader*			m_ImageLoader;
 	LPCWSTR					m_FileName;
 	D3DXVECTOR3				m_vPosition;
+private:
+	RECT					m_Rect;
+
+public:
+	virtual RECT	GetRect() = 0;
+	virtual string GetName() = 0;
 };
 

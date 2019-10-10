@@ -15,10 +15,13 @@ private:
 	D3DXVECTOR3				m_vPosition;
 	string					m_name;
 	LPCWSTR					m_FileName;
+	RECT					m_Rect;
 public:
 	D3DXVECTOR3 GetPosition() { return m_vPosition; }
-	string GetnName() { return m_name; }
 private:
 	CImage_Loader*				m_ImageLoader;
+public:
+	RECT GetRect() override { return m_Rect; }
+	string GetName() override { return m_name; }
 };
 

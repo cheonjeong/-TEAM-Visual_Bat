@@ -20,5 +20,6 @@ protected:
 public:
 	RECT GetRect() { return m_Rect; }
 	LPCWSTR	GetFileName() { return m_FileName; }
+	D3DXIMAGE_INFO	GetImageInfo() { return m_ImageInfo; }
 };
 

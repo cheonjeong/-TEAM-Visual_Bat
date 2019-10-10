@@ -20,5 +20,10 @@ public:
 	string GetnName() { return m_name; }
 private:
 	CImage_Loader*				m_ImageLoader;
+	RECT						m_Rect;
+
+public:
+	RECT	GetRect() override { return m_Rect; }
+	string GetName() override { return m_name; }
 };
 

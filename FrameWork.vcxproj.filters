@@ -439,7 +439,7 @@
       <Filter>CHEON\ROBBY\UI</Filter>
     </ClInclude>
     <ClInclude Include="Spell_.h">
-      <Filter>소스 파일\헤더 파일</Filter>
+      <Filter>CHEON\ROBBY\UI\Spell</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -615,7 +615,7 @@
       <Filter>CHEON\ROBBY\UI</Filter>
     </ClCompile>
     <ClCompile Include="Spell_.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>CHEON\ROBBY\UI\Spell</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
