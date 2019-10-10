@@ -1,10 +1,4 @@
 #pragma once
-
-class CChampionSelect;
-class CSpellSelect;
-
-
-
 class C2DMouse
 {
 public:

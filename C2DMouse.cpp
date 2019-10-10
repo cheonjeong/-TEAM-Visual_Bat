@@ -1,7 +1,5 @@
 #include "BaseInclude.h"
 #include "C2DMouse.h"
-#include "ChampionSelect.h"
-#include "SpellSelect.h"
 
 C2DMouse::C2DMouse()
 {

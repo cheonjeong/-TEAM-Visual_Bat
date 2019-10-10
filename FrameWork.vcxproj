@@ -30,6 +30,7 @@
     <ClInclude Include="C2DMouse.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="CameraMgr.h" />
+    <ClInclude Include="Champ.h" />
     <ClInclude Include="Champion.h" />
     <ClInclude Include="CheonHeader.h" />
     <ClInclude Include="CubeTexture.h" />
@@ -85,6 +86,7 @@
     <ClInclude Include="Texture.h" />
     <ClInclude Include="TextureMgr.h" />
     <ClInclude Include="TimeMgr.h" />
+    <ClInclude Include="UI.h" />
     <ClInclude Include="VIBuffer.h" />
     <ClInclude Include="XFileUtil.h" />
   </ItemGroup>
@@ -102,6 +104,7 @@
     <ClCompile Include="C2DMouse.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="CameraMgr.cpp" />
+    <ClCompile Include="Champ.cpp" />
     <ClCompile Include="Champion.cpp" />
     <ClCompile Include="CubeTexture.cpp" />
     <ClCompile Include="Cube_Texture.cpp" />
@@ -149,6 +152,7 @@
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="TextureMgr.cpp" />
     <ClCompile Include="TimeMgr.cpp" />
+    <ClCompile Include="UI.cpp" />
     <ClCompile Include="VIBuffer.cpp" />
     <ClCompile Include="XFileUtil.cpp" />
     <ClCompile Include="Obj.cpp" />

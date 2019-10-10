@@ -1,9 +1,10 @@
 #pragma once
 #include "Scene.h"
 
-class CImage_Loader;
+class CUI;
 class CAbilityPage;
 class C2DMouse;
+class CImage_Loader;
 
 class CSelectScene :
 	public CScene
@@ -25,30 +26,19 @@ private:
 	void WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam) override;
 
 private:// Champion map
-	map<string, CImage_Loader*>			m_mapChampionList;
-	map<string, CImage_Loader*>			m_CircleChampImage;
-	void MouseChampionCheck();
-	CImage_Loader*				m_ChampionRender;
 
-private://Ability map
-	map<string, CAbilityPage*>			m_mapAbilityList;
-
-private://Spell map
-	vector<CImage_Loader*>				m_vecSpellList;
-	CImage_Loader*						m_pSpellSelect_1;
-	CImage_Loader*						m_pSpellSelect_2;
-
-
-	void MouseSpellCheck();
-
-private:
-	void Champ_Initialize();
-	void Champ_Render();
-
-	void Spell_Initialize();
-	void Spell_Render();
 
 private:
 	CAbilityPage*						m_page;
+
+	// >> temp
+private:
+	CImage_Loader*						m_testsuzi;
+
+	// >> new class
+	CUI*								m_pUI;
+	vector<CUI*>						m_vecChamp;
+	vector<CUI*>						m_vecSpell;
+	map<string, vector<CUI*>*>			m_mapUI_List;
 };
 
