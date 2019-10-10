@@ -438,6 +438,9 @@
     <ClInclude Include="UI.h">
       <Filter>CHEON\ROBBY\UI</Filter>
     </ClInclude>
+    <ClInclude Include="Spell_.h">
+      <Filter>소스 파일\헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Device.cpp">
@@ -610,6 +613,9 @@
     </ClCompile>
     <ClCompile Include="UI.cpp">
       <Filter>CHEON\ROBBY\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Spell_.cpp">
+      <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -73,6 +73,7 @@
     <ClInclude Include="SceneMgr.h" />
     <ClInclude Include="SelectScene.h" />
     <ClInclude Include="SkinnedMesh.h" />
+    <ClInclude Include="Spell_.h" />
     <ClInclude Include="SummonTerrain.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClInclude>
@@ -139,6 +140,7 @@
     <ClCompile Include="SceneMgr.cpp" />
     <ClCompile Include="SelectScene.cpp" />
     <ClCompile Include="SkinnedMesh.cpp" />
+    <ClCompile Include="Spell_.cpp" />
     <ClCompile Include="SummonTerrain.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClCompile>

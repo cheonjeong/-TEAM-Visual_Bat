@@ -4,6 +4,7 @@
 #include "AbilityPage.h"
 #include "Image_Loader.h"
 #include "Champ.h"
+#include "Spell_.h"
 
 
 CSelectScene::CSelectScene()
@@ -31,6 +32,9 @@ HRESULT CSelectScene::Initialize()
 	m_vecChamp.push_back(new CChamp("Garen", L"Resource/choen/ChampImage/Garen/Garen_Square.dds", D3DXVECTOR3(250, 150, 0)));
 	m_vecChamp.push_back(new CChamp("Aatrox", L"Resource/choen/ChampImage/Atrox/Aatrox_Square.dds", D3DXVECTOR3(350, 150, 0)));
 	m_mapUI_List.insert(make_pair("Champ", &m_vecChamp));
+
+	m_vecSpell.push_back(new CSpell_("Cleanse", L"Resource/choen/Spell_Image/Cleanse.png", D3DXVECTOR3(500, 500, 0)));
+	m_mapUI_List.insert(make_pair("Spell", &m_vecSpell));
 	
 	
 	map<string, vector<CUI*>*>::iterator iter = m_mapUI_List.begin();
