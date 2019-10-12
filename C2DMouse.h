@@ -2,16 +2,15 @@
 class CUI;
 class C2DMouse
 {
-public:
+	DECLARE_SINGLETON(C2DMouse);
+private:
 	C2DMouse();
+public:
 	~C2DMouse();
 private:
 	POINT			m_GetCur;
 public:
-	void Initialize();
-	void Progress();
-
+	POINT GetMousePoint();
 public:
-	CUI* IsInImage(vector<CUI*> vecUI);
-	
+	bool IsInImage(CUI* vecUI);	
 };

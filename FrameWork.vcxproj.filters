@@ -441,6 +441,9 @@
     <ClInclude Include="Spell_.h">
       <Filter>CHEON\ROBBY\UI\Spell</Filter>
     </ClInclude>
+    <ClInclude Include="Cheon.h">
+      <Filter>CHEON\CHEON_HEADER</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Device.cpp">

@@ -38,13 +38,20 @@ private:
 	// >> new class
 	CUI*								m_pChamp;
 	CUI*								m_pSpell;
+
+	CUI*								m_pSpellRender_1;
+	CUI*								m_pSpellRender_2;
+
 	vector<CUI*>						m_vecChamp;
 	vector<CUI*>						m_vecChampCircle;
+
 	vector<CUI*>						m_vecSpell;
+
 	map<string, vector<CUI*>*>			m_mapUI_List;
 
-public:
-	void ChampPicking();
-	void SpellPicking();
+	void ChampInitialize();
+	void SpellInitialize();
+	void ChampRender();
+	void SpellRender();
 };
 

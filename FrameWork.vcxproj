@@ -19,7 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AbilityPage.h" />
+    <ClInclude Include="AbilityPage.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="AnimationCtrl.h" />
     <ClInclude Include="BaseInclude.h" />
     <ClInclude Include="Bound.h" />
@@ -32,6 +34,7 @@
     <ClInclude Include="CameraMgr.h" />
     <ClInclude Include="Champ.h" />
     <ClInclude Include="Champion.h" />
+    <ClInclude Include="Cheon.h" />
     <ClInclude Include="CheonHeader.h" />
     <ClInclude Include="CubeTexture.h" />
     <ClInclude Include="Cube_Texture.h" />
@@ -92,7 +95,9 @@
     <ClInclude Include="XFileUtil.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AbilityPage.cpp" />
+    <ClCompile Include="AbilityPage.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="AnimationCtrl.cpp" />
     <ClCompile Include="BaseInclude.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

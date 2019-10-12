@@ -15,6 +15,8 @@
 #include "SystemFunc.h"
 #include "ResourceFunc.h"
 #include "Include.h"
+#include "cheon.h"
+
 extern HWND g_hWnd;
 extern HINSTANCE g_hInst;
 using namespace std;
